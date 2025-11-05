@@ -57,20 +57,19 @@
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="https://thu-irml.com/" target="_blank">Dongjie Zhu</a><sup>1</sup>,</span>
+                Dongjie Zhu<sup>1</sup>,</span>
               <span class="author-block">
-                <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Zhuo Yang</a><sup>2</sup>,</span>
+                Zhuo Yang<sup>2</sup>,</span>
               <span class="author-block">
-                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Tianhang Wu</a><sup>2</sup>,</span>
+                Tianhang Wu<sup>2</sup>,</span>
               <span class="author-block">
-                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Luzhou Ge</a><sup>2</sup>,</span>
+                Luzhou Ge<sup>2</sup>,</span>
               <span class="author-block">
-                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Xuesong Li</a><sup>2</sup>,</span>
+                <a href="https://pure.bit.edu.cn/en/persons/xuesong-li/" target="_blank">Xuesong Li</a><sup>2</sup>,</span>
               <span class="author-block">
-                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Qi Liu</a><sup>*,3</sup>,</span>
+                <a href="https://liuqi8827.github.io/" target="_blank">Qi Liu</a><sup>3</sup>,</span>
               <span class="author-block">
-                <a href="https://sites.google.com/view/homepageoflixiang/home" target="_blank">Xiang
-                  Li</a><sup>*,1</sup>
+                <a href="https://thu-irml.com/members/" target="_blank">Xiang Li</a><sup>1</sup>,</span>
               </span>
             </div>
 
@@ -78,7 +77,7 @@
               <!-- <span class="author-block">Institution Name<br>Conferance name and year</span> -->
               <span class="author-block"><sup>1</sup>Tsinghua University, <sup>2</sup>Beijing Institute of Technology,
                 <sup>3</sup>Northeastern University</span>
-              <span class="eql-cntrb"><small><br><sup>*</sup>Corresponding Author</small></span>
+              <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Corresponding Author</small></span> -->
             </div>
 
             <div class="column has-text-centered">
@@ -116,6 +115,17 @@
                 </a>
               </span>
 
+                <!-- Local paper PDF -->
+                <span class="link-block">
+                  <a href="static/pdfs/Dribble_HRL_paper.pdf" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper (latest)</span>
+                </a>
+              </span>
+
                 <!-- Github link -->
                 <span class="link-block">
                     <a href="https://github.com/Dribble-HRL/Dribble_HRL" target="_blank"
@@ -139,9 +149,9 @@
 
   <!-- Teaser video-->
   <section class="hero teaser">
-    <div class="container is-max-desktop">
+    <div class="container architecture-container">
       <div class="hero-body">
-        <iframe width="840" height="472.5" src="https://www.youtube.com/embed/7Hf6mCO0mZU?si=oigWZdSsZTr5vxWV"
+        <iframe width="840" height="472.5" src="https://www.youtube.com/embed/4sewohsXct8?si=0sfbJpQNmjxNoMD8"
           title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -161,17 +171,11 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Advancing the dynamic loco-manipulation capabilities of quadruped robots in complex terrains is crucial
-              for performing diverse tasks. Specifically, dynamic ball manipulation in rugged environments presents two
-              key challenges. The first is coordinating distinct motion modalities to integrate terrain traversal and
-              ball control seamlessly. The second is overcoming sparse rewards in end-to-end deep reinforcement
-              learning, which impedes efficient policy convergence. To address these challenges, we propose a
-              hierarchical reinforcement learning framework. A high-level policy, informed by proprioceptive data and
-              ball position, adaptively switches between pre-trained low-level skills such as ball dribbling and rough
-              terrain navigation. We further propose Dynamic Skill-Focused Policy Optimization to suppress gradients
-              from inactive skills and enhance critical skill learning. Both simulation and real-world experiments
-              validate that our methods outperform baseline approaches in dynamic ball manipulation across rugged
-              terrains, highlighting its effectiveness in challenging environments.
+              Advancing the dynamic loco-manipulation capabilities of quadruped robots in complex terrains is crucial for performing diverse tasks.
+    Specifically, dynamic ball manipulation in rugged environments presents two key challenges. The first is coordinating <strong>distinct motion modalities</strong> to integrate terrain traversal and ball control seamlessly. The second is overcoming <strong>sparse rewards</strong> in end-to-end reinforcement learning, which impedes efficient policy convergence.
+    To address these challenges, we propose <strong>a hierarchical reinforcement learning framework</strong>. A high-level policy, informed by proprioceptive data and ball position, adaptively switches between pre-trained low-level skills such as ball dribbling and rough terrain navigation.
+    We further propose <strong>Dynamic Skill-Focused Policy Optimization</strong> to suppress gradients from inactive skills and enhance critical skill learning.
+    Both simulation and real-world experiments validate that our methods outperform baseline approaches in dynamic ball manipulation across rugged terrains, highlighting its effectiveness in challenging environments.
 
             </p>
           </div>
@@ -181,16 +185,51 @@
   </section>
   <!-- End paper abstract -->
 
+  <!-- Image section -->
+  <section class="section section-top">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full">
+          <div class="content has-text-centered">
+            <figure class="image wide-figure">
+              <img src="static/images/architecture.png" alt="Description of the image">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <!-- Main content section -->
-  <section class="section">
+  <section class="section section-tight">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column is-full">
           <h2 class="title is-3">Methodology</h2>
           <div class="content has-text-justified">
             <p>
-              We propose a hierarchical RL framework that trains a high-level policy to coordinate dribbling and locomotion skills for dynamic ball manipulation on rugged terrains. We also introduce a dynamic skill-focused loss formulation to improve learning efficiency and convergence in mixed discrete-continuous action spaces.
+              We propose a <strong>hierarchical reinforcement learning (HRL)</strong> framework that comprises two parts:
+               <ul>
+                <li><strong>Low-level skills:</strong> Four pre-trained fundamental policies trained by reinforcement learning, two for ball dribbling and two for terrain locomotion.
+                  <div class="low-level-video">
+                    <video controls playsinline muted loop autoplay>
+                      <source src="static/images/low-level_skills.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </li>
+                <li><strong>High-level policy:</strong> Coordinates dribbling and locomotion skills for dynamic ball manipulation. The high-level policy is trained on <strong>five</strong> distinct terrains: flat ground, ramp-up, ramp-down, rough terrain, and stair descent.</li>
+                  
+
+               </ul>
+
+              We also introduce a novel loss formulation, <strong>Dynamic Skill-Focused Policy Optimization (DSF-PO)</strong>, to improve learning efficiency and convergence in <strong>mixed discrete-continuous action spaces</strong>. 
+              A comprehensive training strategy including <strong>reward shaping</strong> and <strong>curriculum learning</strong> is also proposed.
+              Details are provided in the paper.
+
+              
+
             </p>
           </div>
         </div>
@@ -199,48 +238,23 @@
   </section>
 
 
-  <!-- Image section -->
-  <section class="section">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column is-full">
-          <div class="content has-text-centered">
-            <figure class="image is-9by3">
-              <img src="static/images/Fig_high_level0.png" alt="Description of the image">
-            </figure>
-            <figcaption class="is-size-5">Proposed Hierarchical Framework</figcaption>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
 
-  <section class="section">
+
+  <section class="section-tight">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column is-full">
-          <h2 class="title is-3">Simulation Performance</h2>
+          <h2 class="title is-3">Experiment Results</h2>
           <div class="content has-text-justified">
             <p>
-              We evaluate the robot's dribbling ability across five terrains: stair descent, ramp-down, rough terrain, ramp-up, and flat ground. With a fixed command, the robot successfully completes the task in 121 seconds. It maintains a stable direction except on rough terrain, where external disturbances cause deviations.
+              We conduct extensive experiments, including one that evaluates our algorithm to dribble on a variety of complex terrains.
             </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Image section -->
-  <section class="section">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column is-full">
-          <div class="content has-text-centered">
-            <figure class="image is-9by3">
-              <img src="static/images/skill switch2.png" alt="Description of the image">
-            </figure>
-            <figcaption class="is-size-5">Cross-terrain dribbling performance evaluation.</figcaption>
+            <div class="experiment-video">
+              <video controls playsinline muted loop autoplay>
+                <source src="static/images/cross-dribbling.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
         </div>
       </div>
@@ -248,9 +262,10 @@
   </section>
 
   <!-- Image carousel -->
-  <section class="hero is-small">
+  <section class="hero is-small carousel-tight">
     <div class="hero-body">
       <div class="container">
+        <p class="carousel-intro">We also conduct a series of ablation studies on our proposed algorithm and perform modality-skill consistency checks.</p>
         <div id="results-carousel" class="carousel results-carousel">
           <div class="item has-text-centered" style="display: flex; flex-direction: column; justify-content: center;">
             <div class="item has-text-centered" style="display: flex; 
@@ -259,11 +274,7 @@
                       align-items: center;
                       min-height: 400px;  /* 示例数值，可根据需求调整 */ ">
             <!-- Your image here -->
-            <img src="static/images/curve.jpg" alt="MY ALT TEXT"
-              style="display: block; margin-left: auto; margin-right: auto; max-width: 100%; height: auto;" />
-            <h2 class="subtitle">
-              Training curves of PPO with DSF-PO compared to standard PPO.
-            </h2>
+            <img src="static/images/training-curve.jpg" alt="MY ALT TEXT" class="results-image results-image--medium" />
             </div>
           </div>
           <div class="item has-text-centered" style="display: flex; flex-direction: column; justify-content: center;">
@@ -273,11 +284,7 @@
                       align-items: center;
                       min-height: 400px;  /* 示例数值，可根据需求调整 */ ">
               <!-- Your image here -->
-              <img src="static/images/comparison_sim.png" alt="MY ALT TEXT"
-                style="display: block; margin-left: auto; margin-right: auto; max-width: 50%; height: auto;" />
-              <h2 class="subtitle" style="text-align: center;">
-                Comparison of ball dribbling success rates across different terrains.
-              </h2>
+              <img src="static/images/low-level_skills_ablation.jpg" alt="MY ALT TEXT" class="results-image results-image--large" />
             </div>
           </div>
           <div class="item has-text-centered" style="display: flex; flex-direction: column; justify-content: center;">
@@ -287,11 +294,17 @@
                       align-items: center;
                       min-height: 400px;  /* 示例数值，可根据需求调整 */ ">
               <!-- Your image here -->
-              <img src="static/images/heatmap.png" alt="MY ALT TEXT"
-                style="display: block; margin-left: auto; margin-right: auto; max-width: 40%; height: auto;" />
-              <h2 class="subtitle" style="text-align: center;">
-                Usage frequency of low-level skills across different terrains.
-              </h2>
+              <img src="static/images/comparison.jpg" alt="MY ALT TEXT" class="results-image results-image--small" />
+            </div>
+          </div>
+          <div class="item has-text-centered" style="display: flex; flex-direction: column; justify-content: center;">
+            <div class="item has-text-centered" style="display: flex; 
+                      flex-direction: column;
+                      justify-content: center; 
+                      align-items: center;
+                      min-height: 400px;  /* 示例数值，可根据需求调整 */ ">
+              <!-- Your image here -->
+              <img src="static/images/modality-consistency.jpg" alt="MY ALT TEXT" class="results-image results-image--small" />
             </div>
           </div>
         </div>
@@ -311,8 +324,8 @@
           <h2 class="title is-3">Physical Deployment</h2>
           <div class="content has-text-justified">
             <p>
-              We use a Unitree Go2 quadruped robot, which is additionally equipped with a downward-facing fisheye camera featuring a 240° field-of-view mounted on its head. All policy inference runs onboard with an NVIDIA Jetson Orin NX.
-              We evaluate our policy on four terrains. Among them, the ramp-up, ramp-down, and stair descent terrains are constructed indoors. The cross-terrain scenario consists of irregular ground surfaces, raised curbs, smooth stone pavement, and soft gravel terrain.
+              We use a <strong>Unitree Go2</strong> quadruped robot, which is additionally equipped with a <strong>downward-facing fisheye camera</strong> featuring a 240° field-of-view mounted on its head. All policy inference runs onboard with an NVIDIA Jetson Orin NX.
+              We evaluate our policy on the following terrains.
             </p>
           </div>
         </div>
@@ -322,15 +335,14 @@
 
   
   <!-- Image section -->
-  <section class="section">
+  <section class="section section-tight-top">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column is-full">
           <div class="content has-text-centered">
             <figure class="image is-9by3">
-              <img src="static/images/real_exp.jpg" alt="Description of the image"style="display: block; margin-left: auto; margin-right: auto; max-width: 70%; height: auto;" />
+              <img src="static/images/real-exp.jpg" alt="Description of the image" class="full-width-image" />
             </figure>
-            <figcaption class="is-size-5">Real-world deployment experiments on different terrains.</figcaption>
           </div>
         </div>
       </div>
@@ -338,88 +350,21 @@
   </section>
 
 
-
-  <!-- Youtube video -->
-  <!-- <section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container"> -->
-  <!-- Paper video. -->
-  <!-- <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video"> -->
-  <!-- Youtube embed code here -->
-  <!-- <iframe src="https://www.youtube.com/embed/7Hf6mCO0mZU?si=oigWZdSsZTr5vxWV" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-  <!-- End youtube video -->
-
-
-  <!-- Video carousel -->
-  <!-- <section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%"> -->
-  <!-- Your video file here -->
-  <!-- <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%"> -->
-  <!-- Your video file here -->
-  <!-- <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\ -->
-  <!-- Your video file here -->
-  <!-- <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-  <!-- End video carousel -->
-
-
-
-
-
-
-  <!-- Paper poster -->
-  <!-- <section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section> -->
-  <!--End paper poster -->
-
-
   <!--BibTex citation -->
-  <!-- <section class="section" id="BibTeX">
+  <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>@misc{zhu2025dynamicleggedballmanipulation,
+      title={Dynamic Legged Ball Manipulation on Rugged Terrains with Hierarchical Reinforcement Learning}, 
+      author={Dongjie Zhu and Zhuo Yang and Tianhang Wu and Luzhou Ge and Xuesong Li and Qi Liu and Xiang Li},
+      year={2025},
+      eprint={2504.14989},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2504.14989}, 
+}</code></pre>
     </div>
-</section> -->
+  </section>
   <!--End BibTex citation -->
 
 

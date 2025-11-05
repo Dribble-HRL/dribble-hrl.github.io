@@ -1,11 +1,105 @@
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Google Sans', 'Noto Sans', sans-serif;
+  font-size: 19px;
 }
 
 
 .footer .icon-link {
     font-size: 25px;
     color: #000;
+}
+
+.wide-figure {
+  width: min(1600px, 95vw);
+  margin: 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.wide-figure img {
+  width: 100%;
+  height: auto;
+}
+
+.highlight-list {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  padding-left: 0.5rem;
+}
+
+.highlight-list li {
+  margin-bottom: 0.5rem;
+}
+
+.low-level-video {
+  margin-top: 0.75rem;
+}
+
+.low-level-video video {
+  width: 100%;
+  max-width: none;
+  border-radius: 8px;
+}
+
+.experiment-video {
+  margin-top: 1rem;
+}
+
+.experiment-video video {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.results-image {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 70%;
+  height: auto;
+}
+
+.results-image--large {
+  max-width: 90%;
+}
+
+.results-image--medium {
+  max-width: 65%;
+}
+
+.results-image--small {
+  max-width: 55%;
+}
+
+.carousel-tight .hero-body {
+  padding-top: 0.5rem;
+}
+
+.carousel-intro {
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.section-tight {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.section-tight-top {
+  padding-top: 1rem;
+}
+
+.full-width-image {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 85%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.footer .content p {
+  font-size: 15px;
 }
 
 .link-block a {
@@ -132,6 +226,3 @@ body {
 .eql-cntrb { 
   font-size: smaller;
 }
-
-
-
