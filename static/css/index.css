@@ -103,7 +103,7 @@ body {
 }
 
 .link-block a {
-    margin-top: 5px;
+    margin-top: 15px;
     margin-bottom: 5px;
 }
 
@@ -181,6 +181,11 @@ body {
 
 .publication-authors {
   /*color: #4286f4;*/
+  margin-bottom: 0.35rem;
+}
+
+.publication-links {
+  margin-top: 0.15rem;
 }
 
 .publication-video {
