@@ -184,6 +184,16 @@ body {
   margin-bottom: 0.35rem;
 }
 
+.publication-affiliations {
+  font-family: 'Google Sans', sans-serif;
+  margin-bottom: 1rem;
+  color: #4a4a4a;
+}
+
+.publication-affiliations .author-block {
+  margin: 0 0.6rem;
+}
+
 .publication-links {
   margin-top: 0.15rem;
 }
