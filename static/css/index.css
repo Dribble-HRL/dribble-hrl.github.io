@@ -143,6 +143,19 @@ body {
 
 .publication-title {
     font-family: 'Google Sans', sans-serif;
+    font-size: clamp(2.2rem, 3.4vw, 3.2rem) !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.02em;
+}
+
+.publication-title-line {
+    display: block;
+}
+
+@media screen and (min-width: 1024px) {
+  .publication-title-line {
+    white-space: nowrap;
+  }
 }
 
 .publication-authors {
